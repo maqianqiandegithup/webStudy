@@ -1,0 +1,279 @@
+{
+    "targetResult": {
+        "0": [{
+                "id": 19978,
+                "projectId": 35,
+                "targetId": 1,
+                "targetName": "产权比率",
+                "targetTypeQuantile": 0,
+                "targetValue": "103.7276",
+                "targetCode": "01"
+            },
+            {
+                "id": 19981,
+                "projectId": 35,
+                "targetId": 2,
+                "targetName": "成本费用利润率(%)",
+                "targetTypeQuantile": 0,
+                "targetValue": "-6.0771",
+                "targetCode": "02"
+            },
+            {
+                "id": 19984,
+                "projectId": 35,
+                "targetId": 3,
+                "targetName": "固定资产周转率(次)",
+                "targetTypeQuantile": 0,
+                "targetValue": "0.2427",
+                "targetCode": "03"
+            },
+            {
+                "id": 19987,
+                "projectId": 35,
+                "targetId": 4,
+                "targetName": "归属母公司所有者的净利润同比增长率(%)",
+                "targetTypeQuantile": 0,
+                "targetValue": null,
+                "targetCode": "04"
+            },
+            {
+                "id": 19990,
+                "projectId": 35,
+                "targetId": 5,
+                "targetName": "经营活动产生的现金流量净额同比增长率(%)",
+                "targetTypeQuantile": 0,
+                "targetValue": "0.0000",
+                "targetCode": "05"
+            },
+            {
+                "id": 19993,
+                "projectId": 35,
+                "targetId": 6,
+                "targetName": "经营活动产生的现金流量净额/负债合计",
+                "targetTypeQuantile": 0,
+                "targetValue": "6.4636",
+                "targetCode": "06"
+            },
+            {
+                "id": 19996,
+                "projectId": 35,
+                "targetId": 7,
+                "targetName": "现金流动负债比(%)",
+                "targetTypeQuantile": 0,
+                "targetValue": "7.1040",
+                "targetCode": "07"
+            },
+            {
+                "id": 19999,
+                "projectId": 35,
+                "targetId": 8,
+                "targetName": "经营活动产生的现金流量净额/营业收入(%)",
+                "targetTypeQuantile": 0,
+                "targetValue": "5.5447",
+                "targetCode": "08"
+            },
+            {
+                "id": 20002,
+                "projectId": 35,
+                "targetId": 9,
+                "targetName": "净资产同比增长率(%)",
+                "targetTypeQuantile": 0,
+                "targetValue": "0.0000",
+                "targetCode": "09"
+            },
+            {
+                "id": 20005,
+                "projectId": 35,
+                "targetId": 10,
+                "targetName": "净资产收益率-摊薄(%)",
+                "targetTypeQuantile": 0,
+                "targetValue": "-4.1837",
+                "targetCode": "10"
+            }
+        ],
+        "1": [{
+                "id": 19979,
+                "projectId": 35,
+                "targetId": 1,
+                "targetName": "产权比率",
+                "targetTypeQuantile": 1,
+                "targetValue": "243.7592",
+                "targetCode": "01"
+            },
+            {
+                "id": 19982,
+                "projectId": 35,
+                "targetId": 2,
+                "targetName": "成本费用利润率(%)",
+                "targetTypeQuantile": 1,
+                "targetValue": "0.8253",
+                "targetCode": "02"
+            },
+            {
+                "id": 19985,
+                "projectId": 35,
+                "targetId": 3,
+                "targetName": "固定资产周转率(次)",
+                "targetTypeQuantile": 1,
+                "targetValue": "1.1633",
+                "targetCode": "03"
+            },
+            {
+                "id": 19988,
+                "projectId": 35,
+                "targetId": 4,
+                "targetName": "归属母公司所有者的净利润同比增长率(%)",
+                "targetTypeQuantile": 1,
+                "targetValue": "0.0000",
+                "targetCode": "04"
+            },
+            {
+                "id": 19991,
+                "projectId": 35,
+                "targetId": 5,
+                "targetName": "经营活动产生的现金流量净额同比增长率(%)",
+                "targetTypeQuantile": 1,
+                "targetValue": "0.0000",
+                "targetCode": "05"
+            },
+            {
+                "id": 19994,
+                "projectId": 35,
+                "targetId": 6,
+                "targetName": "经营活动产生的现金流量净额/负债合计",
+                "targetTypeQuantile": 1,
+                "targetValue": "11.6245",
+                "targetCode": "06"
+            },
+            {
+                "id": 19997,
+                "projectId": 35,
+                "targetId": 7,
+                "targetName": "现金流动负债比(%)",
+                "targetTypeQuantile": 1,
+                "targetValue": "11.6245",
+                "targetCode": "07"
+            },
+            {
+                "id": 20000,
+                "projectId": 35,
+                "targetId": 8,
+                "targetName": "经营活动产生的现金流量净额/营业收入(%)",
+                "targetTypeQuantile": 1,
+                "targetValue": "57.5534",
+                "targetCode": "08"
+            },
+            {
+                "id": 20003,
+                "projectId": 35,
+                "targetId": 9,
+                "targetName": "净资产同比增长率(%)",
+                "targetTypeQuantile": 1,
+                "targetValue": "1.6436",
+                "targetCode": "09"
+            },
+            {
+                "id": 20006,
+                "projectId": 35,
+                "targetId": 10,
+                "targetName": "净资产收益率-摊薄(%)",
+                "targetTypeQuantile": 1,
+                "targetValue": "1.9865",
+                "targetCode": "10"
+            }
+        ],
+        "2": [{
+                "id": 19980,
+                "projectId": 35,
+                "targetId": 1,
+                "targetName": "产权比率",
+                "targetTypeQuantile": 2,
+                "targetValue": "361.4046",
+                "targetCode": "01"
+            },
+            {
+                "id": 19983,
+                "projectId": 35,
+                "targetId": 2,
+                "targetName": "成本费用利润率(%)",
+                "targetTypeQuantile": 2,
+                "targetValue": "27.7304",
+                "targetCode": "02"
+            },
+            {
+                "id": 19986,
+                "projectId": 35,
+                "targetId": 3,
+                "targetName": "固定资产周转率(次)",
+                "targetTypeQuantile": 2,
+                "targetValue": "259.0526",
+                "targetCode": "03"
+            },
+            {
+                "id": 19989,
+                "projectId": 35,
+                "targetId": 4,
+                "targetName": "归属母公司所有者的净利润同比增长率(%)",
+                "targetTypeQuantile": 2,
+                "targetValue": "40.4777",
+                "targetCode": "04"
+            },
+            {
+                "id": 19992,
+                "projectId": 35,
+                "targetId": 5,
+                "targetName": "经营活动产生的现金流量净额同比增长率(%)",
+                "targetTypeQuantile": 2,
+                "targetValue": "145.0498",
+                "targetCode": "05"
+            },
+            {
+                "id": 19995,
+                "projectId": 35,
+                "targetId": 6,
+                "targetName": "经营活动产生的现金流量净额/负债合计",
+                "targetTypeQuantile": 2,
+                "targetValue": "16.0984",
+                "targetCode": "06"
+            },
+            {
+                "id": 19998,
+                "projectId": 35,
+                "targetId": 7,
+                "targetName": "现金流动负债比(%)",
+                "targetTypeQuantile": 2,
+                "targetValue": "16.0984",
+                "targetCode": "07"
+            },
+            {
+                "id": 20001,
+                "projectId": 35,
+                "targetId": 8,
+                "targetName": "经营活动产生的现金流量净额/营业收入(%)",
+                "targetTypeQuantile": 2,
+                "targetValue": "17881.8922",
+                "targetCode": "08"
+            },
+            {
+                "id": 20004,
+                "projectId": 35,
+                "targetId": 9,
+                "targetName": "净资产同比增长率(%)",
+                "targetTypeQuantile": 2,
+                "targetValue": "26502.7154",
+                "targetCode": "09"
+            },
+            {
+                "id": 20007,
+                "projectId": 35,
+                "targetId": 10,
+                "targetName": "净资产收益率-摊薄(%)",
+                "targetTypeQuantile": 2,
+                "targetValue": "9.7836",
+                "targetCode": "10"
+            }
+        ]
+    }
+
+
+}
