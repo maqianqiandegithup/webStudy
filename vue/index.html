@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 实现鼠标点击标签，弹出任意一个标签名称 -->
+    <div class="class1 class2"></div>
+    <button class="btn">添加事件</button>
+    <button class="btn2">删除</button>
+
+    <script>
+        //方法1 
+        /** console.dir(document.querySelector('.btn'))
+        document.querySelector('.btn').onclick = function() {
+            document.querySelector('.class1').classList.add('class3')
+            console.log(document.querySelector('.class1').classList)
+        }
+        document.querySelector('.btn2').onclick = function() {
+            document.querySelector('.class1').classList.remove('class3')
+            console.dir(document.querySelector('.class1'))
+        } */
+
+        //方法2
+        console.dir(document.querySelector('.btn'))
+        document.querySelector('.btn').onclick = function() {
+
+        }
+        document.querySelector('.btn2').onclick = function() {
+            hasClassName(obj, cls)
+        }
+
+        function hasClassName(obj, cls) {
+            return obj.className.match(new RegExp(`\\s|^${cls}\\s|$`))
+        }
+
+        function addClassName(name, cls) {
+            let obj = document.querySelector('.' + name)
+            hasClassName(obj, cls) && (obj.className += "" + cls)
+        }
+        // document.onclick = function(event) {
+        //     let e = event || window.event
+        //     let o = e['target'] || e['srcElement']
+        //     alert(o.tagName.toLowerCase())
+        // }
+
+        // function eventName() {
+        //     let e = event || window.event
+        //     let o = e['target'] || e['srcElement']
+        //     alert(o.tagName.toLowerCase())
+        // }
+
+        // window.onload = function() {
+        //     var el = document.getElementsByName('body')
+        //     el[0].onclick = eventName
+        // }
+    </script>
+</body>
+
+</html>
