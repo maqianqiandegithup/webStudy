@@ -43,3 +43,9 @@ Object.prototype.toString.call(Symbol(22)) => "[object Symbol]"
 Object.prototype.toString.call(() => {}) => "[object Function]"
 Object.prototype.toString.call(null) => "[object Null]"
 Object.prototype.toString.call(undefined) => "[object Undefined]"
+    //类型判断的方法
+function typeOf(obj) {
+    let type = Object.prototype.toString.call(obj)
+    let reg = /\[object\s+(\w+)\]/
+    return type.match(reg)[1].toLocaleLowerCase()
+}
