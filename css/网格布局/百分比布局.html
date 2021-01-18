@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Grid {
+            display: flex;
+            height: 100px;
+            width: 100%;
+        }
+        
+        .Gred-cell {
+            background: #CCC;
+            flex: auto;
+            margin: 20px;
+        }
+        
+        .u-lof1 {
+            flex: 0 0 100%
+        }
+        
+        .u-lof2 {
+            flex: 0 0 50%
+        }
+        
+        .u-lof3 {
+            flex: 0 0 33.3333%
+        }
+        
+        .u-lof4 {
+            flex: 0 0 25%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Grid">
+        <div class="Gred-cell u-lof2"></div>
+        <div class="Gred-cell"></div>
+        <div class="Gred-cell"></div>
+    </div>
+    <div class="Grid">
+        <div class="Gred-cell"> </div>
+        <div class="Gred-cell u-lof3"> </div>
+    </div>
+    <div class="Grid">
+        <div class="Gred-cell u-lof4"> </div>
+        <div class="Gred-cell"> </div>
+        <div class="Gred-cell u-lof4"> </div>
+    </div>
+</body>
+
+</html>
