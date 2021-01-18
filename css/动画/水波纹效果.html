@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wave-box {
+            height: 400px;
+            width: 400px;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        
+        .wave {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 1px solid #979797;
+            position: absolute;
+            transform-origin: center center;
+            animation: wv 7s linear infinite;
+            -webkit-animation: wv 7s linear infinite;
+            /* Safari 和 Chrome */
+            opacity: 0;
+        }
+        
+        @keyframes wv {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            30% {
+                opacity: 0.7;
+                transform: scale(0.65);
+            }
+            70% {
+                opacity: 0.1;
+                transform: scale(0.85);
+            }
+            100% {
+                opacity: -0.2;
+                transform: scale(1);
+            }
+        }
+        
+        .wave1 {
+            animation-delay: 0s;
+        }
+        
+        .wave2 {
+            animation-delay: 1.5s;
+        }
+        
+        .wave3 {
+            animation-delay: 3s;
+        }
+        
+        .wave4 {
+            animation-delay: 4.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wave-box">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </div>
+</body>
+
+</html>
