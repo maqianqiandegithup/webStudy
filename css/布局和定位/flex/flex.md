@@ -18,3 +18,8 @@ auto | flex-start | flex-end | center | baseline | stretch;
 ## 注意
 1.容器使用flex之后，内部的in-line会变成inline-block,能设置宽和高
 2.
+
+
+## 使用场景
+1.固定的底栏
+2.

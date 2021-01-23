@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .header,
+        .footer {
+            height: 10vh;
+            background: #ccc;
+        }
+        
+        .content {
+            flex: 1;
+            background: green;
+        }
+        
+        .son {
+            height: 1000px;
+            background: grey;
+        }
+        
+        .style {}
+    </style>
+</head>
+
+<body style="-webkit-user-select: none;">
+    <div class="container">
+        <header class="header"></header>
+        <main class="content">
+            <div class="son"></div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>
