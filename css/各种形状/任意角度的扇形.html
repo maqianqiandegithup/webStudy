@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用css3绘制任意角度扇形</title>
+    <style>
+        .pie {
+            position: relative;
+            margin: 25em auto;
+            padding: 0;
+            width: 32em;
+            height: 32em;
+            border-radius: 50%;
+            list-style: none;
+            /* overflow: hidden; */
+            transform: rotate(0deg);
+            /*针对mac safari浏览器兼容*/
+            background: gray;
+        }
+        
+        .slice {
+            /*一个slice最多设置成一个90度的扇形，超过就需要多个slice进行拼接*/
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 50%;
+            transform-origin: 0% 100%;
+            /*设置旋转的基准点*/
+        }
+        
+        .slice-1 {
+            /* transform: skewX(40deg); */
+            transform: inherit;
+            /*通过配置rotate和skewY的值来设置扇形的角度和位置*/
+            background: red;
+            /* transition: all 3s linear; */
+            animation: sk linear 3s 3;
+            animation-fill-mode: both
+        }
+        
+        .slice-1:hover {
+            /* transform: rotate(-36deg) skewY(-54deg); */
+            /* transform: skewX(40deg) skewY(40deg); */
+            /* transform: skew(40deg, 40deg); */
+        }
+        
+        @keyframes sk {
+            50% {
+                /* transform: rotate(-36deg) skewY(-54deg); */
+                /* transform: skewY(40deg); */
+            }
+            100% {
+                /* transform: rotate(-36deg) skewY(-54deg); */
+                /* transform: skewX(40deg) skewY(40deg); */
+                transform: translateX(100px) skewY(40deg);
+            }
+        }
+        /* .slice-2 {
+            transform: skewX(40deg);
+            background: green;
+        } */
+    </style>
+</head>
+
+<body>
+    <ul class='pie'>
+        <li class='slice-1 slice'> </li>
+        <!-- <li class='slice-2 slice'> </li> -->
+        <ul>
+</body>
+
+</html>
