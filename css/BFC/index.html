@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .father {
+            /* overflow: hidden; */
+        }
+        
+        p {
+            /* margin: 20px 0; */
+            border: 2px solid red;
+        }
+        
+        p:nth-child(1) {
+            float: left;
+        }
+        
+        p:nth-child(2) {
+            border: 2px solid green;
+            margin-left: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <p>你的
+        </p>
+        <p>我的</p>
+    </div>
+</body>
+
+</html>
