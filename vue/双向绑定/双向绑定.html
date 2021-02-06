@@ -11,16 +11,95 @@
 <body>
 
     <script>
-        let vm = new Vue({
-            data: {
-                obj: {
-                    a: 1
+        function defineReactive(data, key, val) {
+            observe(val); // 递归遍历所有子属性
+            var dep = new Dep()
+            Object.defineProperty(data, key, {
+                enumerable: true,
+                configurable: true,
+                get: function() {
+                    return val;
+                    console.log(this)
+                    dep.addSub()
+                        // 这里的this指的就是data
+                },
+                set: function(newVal) {
+                    val = newVal;
+                    console.log('属性' + key + '已经被监听了，现在值为：“' + newVal.toString() + '”');
                 }
-            },
-            created: function() {
-                console.log(this.obj);
+            });
+        }
+
+        function observe(data) {
+            if (!data || typeof data !== 'object') {
+                return;
             }
-        })
+            Object.keys(data).forEach(function(key) {
+                defineReactive(data, key, data[key]);
+            });
+        };
+
+        var library = {
+            book1: {
+                name: ''
+            },
+            book2: ''
+        };
+        observe(library);
+        library.book1.name = 'vue权威指南'; // 属性name已经被监听了，现在值为：“vue权威指南”
+        library.book2 = '没有此书籍'; // 属性book2已经被监听了，现在值为：“没有此书籍”
+
+        function Dep() {
+            this.subs = []
+        }
+        Dep.prototype = {
+            addSub: function(sub) {
+                this.subs.push(sub)
+            },
+            notify: function() {
+                this.subs.forEach(sub => {
+                    sub.update()
+                })
+            }
+        }
+
+        function encrypt(mingwen, miyao) {
+            // 原理：字符和Unicode转码
+            var arr = mingwen.split('')
+            var miwen = []
+            var miyaoUnicode = miyao.toString().charCodeAt()
+            miwen = arr.map(ele => String.fromCharCode(ele.charCodeAt() + miyaoUnicode))
+            return miwen.join('')
+        }
+        encrypt('114477', 3)
+
+        function watcher(vm, exp, cb) {
+            this.cb = cb
+            this.vm = vm
+            this.exp = exp
+            this.value = this.get()
+        }
+        watcher.prototype = {
+                update: function() {
+                    this.run()
+                },
+                run: function() {
+                    // 首先要改变自身的value
+                    var value = this.vm.data(this.exp)
+                    var oldVal = this.value
+                    if (value !== oldVal) {
+                        this.value = value
+                        this.cb.call(this.vm, value, oldVal)
+                    }
+                },
+                get: function() {
+                        return this.vm.data[this.exp]
+                        return value
+                    }
+                    // 一般来说需要初始化一次，那么之后会不会继续调用get呢？,
+                    // 在初始化compile模板字符串的时候new watcher
+            }
+            // compiler
     </script>
 
 </body>
