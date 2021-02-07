@@ -37,6 +37,7 @@ eventEmitter.off = function(event, fn) {
         fns = eventEmitter.list[event]
     if (!fns || !fns.length) return false
     if (!fn) {
+        // 如果只提供了事件，则移除该事件所有的监听器
         fns && (fns.length = 0)
     } else {
         fns.forEach((cb, index) => {
