@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "439942",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "14445236",
+      "name": "重置",
+      "font_class": "zhongzhi",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    },
+    {
+      "icon_id": "17391454",
+      "name": "保存",
+      "font_class": "baocun",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    }
+  ]
+}

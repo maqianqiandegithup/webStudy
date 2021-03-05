@@ -1,0 +1,456 @@
+@import 'tooltip'
+@import 'styleFun'
+$marginWidth = 24px
+$leftWidth = 240px
+$headerHeight = 60px
+$primaryFontColor = #1d1d1d 
+$secondFontColor = #999999
+$themeColor = #0d4985
+$sencondColor = #e7e7e7
+$warnColor = #ff5d5d
+$borderColor = #bfbfbf
+$primaryFontSize = 14px
+$secondFontSize = 16px
+$tableHeadColor = #f4f3f3  
+$tableBodyColor = #fafafa
+$scrollWidth = 8px
+$scrollHeight = 10px
+* {
+    margin: 0;
+    // font-size 14px
+}
+body{
+ font-size 14px
+}
+@font-face {
+   
+}
+@font-face {
+   
+}
+#app {
+    font-family:PINGFANG_MEDIUM, 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    color: #1d1d1d;
+}
+
+a {
+    color: #1d1d1d;
+    text-decoration: none;
+}
+
+.el-button--primary {
+    background-color: $themeColor !important;
+    border-color: $themeColor !important;
+}
+
+.el-button--primary:visited,
+.el-button--primary:hover,
+.el-button--primary:active {
+    background-color: $themeColor;
+    border-color: $themeColor;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: #efefef;
+}
+
+.public-head {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-sizing: border-box;
+    height: 60px;
+    width: 100%;
+}
+
+.public-head-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.public-head-left h4 {
+    font-size: 18px;
+}
+.public-head-rightt {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.public-box {
+    box-sizing: border-box;
+    margin: vw(20);
+    background: #fff;
+    width: 'calc(100% - %s)' % (@margin * 2) ;
+    padding: vw(20);
+    height: 'calc(100% - 60px - %s)' % (@margin * 2);
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+    border-color: $themeColor!important;
+}
+
+.el-select .el-input__inner:focus {
+    border-color: $themeColor;
+}
+
+.el-menu {
+    border-color: #2f4050;
+}
+// 常用margin
+.mb-2 { margin-bottom: 2px; }
+.mb-4 { margin-bottom: 4px; }
+.mb-6 { margin-bottom: 6px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-40 { margin-bottom: 40px; }
+    
+.ml-2 { margin-left: 2px; }
+.ml-4 { margin-left: 4px; }
+.ml-6 { margin-left: 6px; }
+.ml-8 { margin-left: 8px; }
+.ml-10 { margin-left: 10px; }
+.ml-20 { margin-left: 20px; }
+.ml-40 { margin-left: 40px; }
+    
+.mr-2 { margin-right: 2px; }
+.mr-4 { margin-right: 4px; }
+.mr-6 { margin-right: 6px; }
+.mr-8 { margin-right: 8px; }
+.mr-10 { margin-right: 10px; }
+.mr-20 { margin-right: 20px; }
+.mr-40 { margin-right: 40px; }
+// flex常用布局
+flex($position) {
+  display: flex;
+  align-items: center;
+  justify-content: $position;
+}
+
+.flex-start { 
+    flex(flex-start) //上下居中&左对齐
+}
+.flex-end { 
+    flex(flex-end) //上下居中&右对齐
+}
+.flex-bet { 
+    flex(space-between) //上下居中&左右对齐
+}
+.flex-center { 
+    flex(center) //上下左右居中
+}
+
+
+// 按钮样式统一
+button {
+    outline:none;
+}
+button.el-button,
+button.el-button:focus,
+button.el-button:link,
+button.el-button:visited,
+button.el-button:hover,
+button.el-button:active {
+    optionStyl();
+    border-color: $themeColor;
+}
+.el-input input {
+    border-radius: 4px 0 0 4px;
+}
+// 复合型输入框样式统一
+.el-input-group {
+    display: flex;
+    & > .el-input__inner {
+        flex: 1;
+        height: inherit;
+        line-height: inherit;
+        padding-left: 28px;
+        border-radius: 4px 0 0 4px;
+        &:focus {
+            border-color: $themeColor;
+        }
+    }
+    .el-input-group__append { //后置slot
+        optionStyl();
+        border: none;
+        .el-button {
+            margin: -5px;
+        }
+    }
+    .el-input-group__prepend {
+        background-color: transparent;
+        border: none;
+        position absolute;
+        top: 0;
+        bottom: 0;
+        padding-left: 10px;
+        // padding-right: 4px;
+        display: flex;
+        align-items: center;
+        .el-button{
+            // margin-left 10px
+        } 
+    }
+}
+
+// 下拉框样式
+.el-input{
+    & > .el-input__inner{
+        height 30px
+        line-height 30px
+        &:hover{
+            border-color $themeColor !important
+        }
+    }
+    .el-input__icon{
+        line-height 30px !important
+    }
+}
+
+.el-input.is-focus .el-input__inner {
+    border-color $themeColor
+}
+.el-input__inner:focus{
+    border-color $themeColor
+}
+
+// 表单样式(可选择增加分页组件样式自适应)
+.public-from {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .el-table {
+        border: 1px solid #bfbfbf;
+        td,th.is-leaf {
+            border-bottom: 1px solid #bfbfbf;
+        }
+        .el-table__header thead th {
+            background-color: #f4f3f3;    
+        }
+        .el-table__body tbody tr:nth-child(2n) {
+            background-color: #fafafa;
+        }
+    }
+    .el-pagination {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 76px;
+        background-color: #f4f3f3;
+        border: 1px solid #bfbfbf;
+        border-top: none;
+        display: flex;
+        justify-content: flex-end;
+        .el-select .el-input {
+            input {
+                color: #bfbfbf;
+                background-color: rgba(0,0,0,0);
+                &:link,&:visited,&:hover,&:active {
+                    border-color: #0d4985;
+                    color: #0d4985;
+                }
+            }
+            &.is-focus input {
+                border-color: #0d4985;
+                color: #0d4985;
+            }
+        }
+        button, .el-pager li {
+            background-color: #f4f3f3;
+            border: 1px solid #bfbfbf;
+            color: #bfbfbf;
+            margin: 0 4px;
+            &:not(:disabled):link,&:not(:disabled):visited,&:not(:disabled):hover,&:not(:disabled):active,&.active {
+                border-color: #0d4985;
+                color: #0d4985;
+            }
+            &.btn-prev,&.btn-next {
+                min-width: 26px;
+                height: 26px;
+                padding: 0;
+            }
+        }
+        .el-pager li,.el-pager li::before {
+            padding: 0;
+            min-width: 30px;
+            height: 26px;
+            line-height: 26px;
+        }
+    }
+}
+// dialog弹窗样式
+.el-dialog {
+    border-radius: unset;
+    .el-dialog__header {
+        padding: 16px 18px 14px 16px;
+        background-color: #f7f7f7;
+        span {
+            font-size: 16px;
+        }
+        button i {
+            font-size: 20px;
+        }
+    }
+    .el-dialog__body {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        
+    }
+    .el-dialog__footer {
+        padding: 10px 20px;
+        border-top: 1px solid #bfbfbf;
+        button {
+            margin-left: 23px;
+            width: 90px;
+            height: 36px;
+            border-radius: 2px;
+            &:first-child {
+                background-color: #fff;
+                border: 1px solid #bfbfbf;
+                color: #1e1e1e;  
+            }
+        }
+    }
+}
+.el-select-dropdown__item.selected{
+    color $themeColor
+}
+
+// 单选框样式
+.el-radio-button__orig-radio:checked+.el-radio-button__inner{
+    background  #fff
+    border 1px  solid $themeColor
+    color $themeColor
+}
+.el-radio-button__inner{
+    // width 101px
+    padding: 7px 20px !important;
+    &:hover{
+        color $themeColor
+        border-color  $themeColor
+        border-left 1px solid $themeColor !important
+    }
+}
+// 滚动条
+.list-scroll::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #f1f1f1;
+    }
+
+    .list-scroll::-webkit-scrollbar {
+        width: 8px;
+        background-color: #f1f1f1;
+    }
+
+    .list-scroll::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #c1c1c1;
+    }
+// 表格样式
+.table-box{
+    margin-top 20px;
+    
+}
+.table-box .el-table{
+    height calc(100%)
+}
+// 表格中的按钮样式
+.btn-text{
+    display inline-block
+    font-size 14px
+    cursor pointer
+}
+.btn-text.btn-primary{
+    color:$themeColor
+    // font-weight bold
+}
+.btn-text.btn-error{
+    color: #ff5d5d
+    // font-weight bold
+}
+
+// 公共表格样式
+.el-table th{
+    background #f4f3f3
+}
+.el-table {
+    border 1px solid #bfbfbf
+}
+.el-table td, .el-table th.is-leaf {
+    border-bottom: 1px solid #bfbfbf;
+}
+.el-table.el-table--scrollable-y .el-table__fixed-right{
+    right $scrollWidth !important  
+}
+.el-table.el-table--scrollable-x .el-table__fixed,
+.el-table.el-table--scrollable-x .el-table__fixed-right,
+{
+    height calc(100% - 11px) !important
+}
+.el-table.el-table--scrollable-x .el-table__fixed .el-table__fixed-body-wrapper,
+.el-table.el-table--scrollable-x .el-table__fixed-right .el-table__fixed-body-wrapper{
+    bottom 0 !important
+}
+
+// 表格的滚动条
+.el-table__body-wrapper::-webkit-scrollbar{
+    width $scrollWidth 
+    height $scrollHeight 
+}
+.el-table__body-wrapper::-webkit-scrollbar-thumb{
+    background-color: #c1c1c1;
+    border-radius: 8px;
+}
+
+// 下拉框样式
+.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
+    color:$themeColor
+}
+
+// tab标签页
+.el-tabs--border-card{
+    box-shadow 0 0
+    border none
+    .el-tabs__header {
+        background-color #fff
+        border-bottom 1px solid #bfbfbf
+        .el-tabs__item{
+            margin 0
+        }
+        .el-tabs__item.is-active{
+            color $themeColor
+            border-top-color $themeColor 
+            border-right-color $themeColor;
+            border-left-color $themeColor
+            // border 1px solid #0d4985
+        }
+      
+        .el-tabs__item:not(.is-disabled):hover{
+            color $themeColor
+        }
+        .el-tabs__nav{
+            margin-left 15px
+        }
+    }
+}
+
+// warn字体
+.warn-font{
+    color:$warnColor
+}
+.el-message-box__btns{
+    .el-button--default:not(.el-button--primary){
+    background: #fff !important;
+    color: #333 !important;
+    border-color: #bfbfbf !important
+}
+}

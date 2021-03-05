@@ -1,0 +1,50 @@
+// 动态计算px，以UI的输入设计为主
+$vw-base = 1920
+$vh-base = 1080
+vw($px)
+    ($px / $vw-base) * 100vw
+vh($px)
+    ($px / $vh-base) * 100vh
+// 
+ellipsis()
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+// flex常用布局
+flex($position) {
+  display: flex;
+  align-items: center;
+  justify-content: $position;
+}
+
+.flex-start { 
+    flex(flex-start) //上下居中&左对齐
+}
+.flex-end { 
+    flex(flex-end) //上下居中&右对齐
+}
+.flex-bet { 
+    flex(space-between) //上下居中&左右对齐
+}
+
+.flex-column {
+    flex-direction: column;    
+}
+ 
+optionStyl() {
+    padding: 5px;
+    background-color: $themeColor;
+    color: #fff;
+    min-width: 90px;
+    box-sizing: border-box;
+
+}
+// 生成固定高度或宽度的分割线
+divider($height, $width,$marTop,$marLeft) {
+    background #e5e5e5
+    display inline-block
+    height $height
+    width $width
+    margin $marTop $marLeft
+}
