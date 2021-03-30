@@ -5,10 +5,3 @@ function MyObject(name) {
 }
 MyObject.prototype.mqq = function() {}
 var a = new MyObject('name')
-
-
-function MyObject2(name) {
-    let obj = new Object()
-    obj.name = name
-    return obj
-}
