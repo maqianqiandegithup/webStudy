@@ -1,0 +1,71 @@
+/* css属性级的hack 
+参考链接：https://www.cnblogs.com/amcy/p/9792739.html
+*/
+a{
+    color:red;
+    _color:red
+}
+/* ie6，属性级别 */
+a{
+    color:red;
+    _color:red;
+    *color:red;
+    +color:red;
+    *+color:red;
+    [color:red;
+    color:red\9;
+    color:red!important; /* IE6 不识别!important*/
+}
+/* ie6,css选择器级Hack */
+*{
+
+}
+@media screen\9{
+/* 只对IE6/7生效 */
+}
+@media \0screen\,screen\9{body { 
+    background: blue; 
+}}
+
+*html #demo { color:red;} /* 仅IE6 识别 */
+/*ie6 IE条件注释Hack */
+<!--[if IE]>此处内容只有IE可见<![endif]--> 
+<!--[if IE 6]>此处内容只有IE6.0可见<![endif]--> 
+<!--[if gt IE 6]> IE6以上版本可识别,IE6无法识别 <![endif]-->
+/* ie7 浏览器的属性级别 */
+a{
+*color:red; /* IE6、IE7 识别 */
++color:red; /* IE6、IE7 识别 */
+*+color:red; /* IE6、IE7 识别 */
+[color:red; /* IE6、IE7 识别 */
+color:red\9; /* IE6、IE7、IE8、IE9 识别 */
+}
+/* ie7 浏览器的选择符级别 */
+@media screen\9{}
+/* 只对IE6/7生效 */
+@media \0screen\,screen\9{body { background: blue; }}
+/* 只对IE6/7/8有效 */
+*+html #demo { color:red;} /* 仅IE7 识别 */
+head:first-child+body #demo { color:red; } /* IE7+、FF、Chrome、Safari、Opera 可以识别 */
+
+/* ie7 条件注释 */
+<!--[if IE 7]>此处内容只有IE7.0可见<![endif]--> 
+<!--[if !IE 7]>此处内容只有IE7不能识别，其他版本都能识别，当然要在IE5以上。<![endif]-->
+<!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->
+<!--[if lt IE 7]> 低于IE7的版本才能识别，IE7无法识别。 <![endif]-->
+<!--[if lte IE 7]> IE7以及IE7以下版本可识别<![endif]-->
+
+/* ie8 属性级别 */
+color:red\9; /* IE6、IE7、IE8、IE9 识别 */
+color:red\0; /* IE8、IE9 识别*/
+
+/* ie8选择器级别 */
+@media \0screen {body { background: red; }}只对IE8有效
+@media \0screen\,screen\9{body { background: blue; }}只对IE6/7/8有效
+@media screen\0 {body { background: green; }} 只对IE8/9/10有效
+
+/* ie8条件注释级别 */
+<!--[if IE]>此处内容只有IE可见<![endif]--> 
+<!--[if !IE 7]>此处内容只有IE7不能识别，其他版本都能识别，当然要在IE5以上。<![endif]-->
+<!--[if gt IE 6]> IE6以上版本可识别,IE6无法识别 <![endif]-->
+<!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->

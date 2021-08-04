@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!--一、满屏品字布局 -->
+    <!--
+     为什么叫满屏品字布局：成品字形式,
+     1.元素上下分布：元素的高怎么确定 【各自占剧屏幕的50%】
+     2.上面的元素水平居中，宽度是50%
+     3.下面的元素左右定位
+-->
+    <div class="pin">
+        <div class="header">
+
+        </div>
+        <div class="main">
+            <div class="left">
+
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+    </div>
+<!-- css画三角形 -->
+<div class="triangle">
+    <div class="bottom"></div>
+    <div class="left"></div>
+    <!-- 直角三角形 -->
+    <div class="leftTop"></div>
+    <!-- 带边框的三角形或者箭头:利用绝对定位和伪元素。两个三角形重叠，然后是父子元素关系，决定定位的位置是padding-->
+    <div class="withBorder">
+        <div class="son"></div>
+    </div>
+</div>
+<!-- css画扇形 和圆环-->
+<div class="sector ">
+
+</div>
+<!-- css实现旋转-->
+<div id="euro">
+    <article class="back"></article>
+    <article class="middle" style="transform: translateZ(1px)"></article>
+    <article class="middle" style="transform: translateZ(2px)"></article>
+    <article class="middle" style="transform: translateZ(3px)"></article>
+    <article class="middle" style="transform: translateZ(4px)"></article>
+    <article class="middle" style="transform: translateZ(5px)"></article>
+    <article class="middle" style="transform: translateZ(6px)"></article>
+    <article class="middle" style="transform: translateZ(7px)"></article>
+    <article class="middle" style="transform: translateZ(8px)"></article>
+    <article class="middle" style="transform: translateZ(9px)"></article>
+    <article class="front"></article>
+</div>
+</body>
+
+</html>

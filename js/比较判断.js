@@ -1,6 +1,6 @@
 布尔和所有比 = 》数字
 数字和字符： 字符 = 》数字
-对象和原始： toPromitive先valueof， 然后stringOf
+对象和原始： toPromitive先valueof， 然后tostring
 对象比较存储地址
 // if([]==0)
 1. Boolean(Number([]) == 0)

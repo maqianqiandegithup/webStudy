@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 16px;
+        }
+
+        .father {
+            height: 300px;
+            width: 300px;
+            margin: 50px;
+            padding: 10px;
+            border: 3px dotted #ccc;
+            background: red;
+        }
+
+        .child {
+            height: 50%;
+            width: 30%;
+            margin: 2%;
+            padding: 2%;
+            background-color: yellow;
+            font-size: 12px;
+            transform: scale(0.4)
+                /* */
+        }
+
+        .bac-pos1{
+            height: 300px;
+            width: 300px;
+            background: url(./backimg/bike.jpg) no-repeat;
+            /* background-position: -100px -50px; */
+            /* background-size: 300px 300px;  */
+            /* background-size: cover; 按比例缩放 */
+            background-size: contain; /*按照比例自适应缩放*/
+             /*使用数字数字和百分比，整个图片会被缩小和放大，auto就是自己按比例自己缩小
+            1.只规定北京图片的大小，如果没有设置no-repeat，也会被平铺
+            2.
+            */
+            border: 1px solid red
+        }
+        .bac-pos2{
+            height: 600px;
+            width: 1000px;
+            background: url(./backimg/bike.jpg) no-repeat;
+            /* background-position: -100px -50px; */
+           
+            border: 1px solid red
+        }
+        /* 背景图覆盖范围：width+padding */
+        /* 背景色覆盖范围：width+padding+border */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="father">
+        <div class="child">
+            我的
+        </div>
+    </div> -->
+    <!-- bacground-postion属性 -->
+    <div class="bac-pos1">
+
+    </div>
+    <div class="bac-pos2">
+
+    </div>
+</body>
+
+</html>

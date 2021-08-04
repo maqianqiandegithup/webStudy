@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* webkit浏览器或移动端的页面 */
+        /* p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            width: 300px;
+            -webkit-box-orient: vertical;
+        } */
+        /* 普通方式：适用于所有的浏览器
+                劣势：有空白，最后一个字体可能显示不完整
+         */
+        /* p {
+            line-height: 1.5em;
+            width: 300px;
+            height: 3em;
+            overflow: hidden;
+            position: relative;
+        }
+
+        p::after {
+            content: "...";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 0 5px 1px 6px;
+            background: #fff;
+        } */
+
+        /*单行文本溢出*/
+        p {
+            width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        我的我的我的我的我的我的我的我的 我的我的我的我的我的我的我的我的 我的我的我的我的我的我的我的我的 我的我的我的我的我的我的我的我的 我的我的我的我的我的我的我的
+        我的 我的我的我的我的我的我的我的我的 我的我的 我的我的我的我的我的我的我的我的 我的我的我的我的我的我的我的我的
+        我的我的我的我的我的我的
+        我的我的我的我的我的我的
+        我的我的我的我的我的我的
+        我的我的我的我的我的我的
+    </p>
+</body>
+
+</html>

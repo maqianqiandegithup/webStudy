@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* 方案1：在center中创建bfc，利用的是bfc的区域不会与float的元素区域重叠这一个特性 */
+        .left{
+            height: 300px;
+            width: 200px;
+            float: left;
+            background: red;
+            margin-right: 10px;
+        }
+        .center{
+            background: purple;
+            height: 300px;
+            overflow: hidden; 
+        }
+        .right{
+            background: blue;
+            height: 300px;
+            float: right;
+            width: 200px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 使用BFC -->
+    <!-- 左浮动，右自适应 -->
+    <div class="container">
+        <div class="left">
+
+        </div>
+        <div class="right">
+
+        </div>
+        <div class="center">
+
+        </div>
+    </div>
+</body>
+</html>

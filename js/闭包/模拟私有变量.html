@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 立即执行函数，就是产生了自己的一个词法作用域和上下文执行环境
+        for (var i = 1; i <= 5; i++) {
+            setTimeout((function (i) {
+                return function () {
+                    console.log(i);
+                }
+            })(i), i * 1000);
+        }
+
+        for (var i = 1; i < 5; i++) {
+            setTimeout((function (i) {
+                return function () {
+                    console.log(i)
+                }
+            })(), i * 1000);
+        }
+
+
+        var makeCounter = (function () {
+            var privateCounter = 0;
+            function changeBy(val) {
+                privateCounter += val
+            }
+
+            return {
+                increment: function () {
+                    changeBy(1);
+                },
+                decrement: function () {
+                    changeBy(-1);
+                },
+                value: function () {
+                    return privateCounter;
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

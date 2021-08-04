@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .father {
+            height: 100px;
+            width: 100px;
+            position: relative
+        }
+
+        .box {
+
+            font-size: 0;
+            /* animation: myroate 2s infinite linear; */
+
+        }
+
+        @-webkit-keyframes myroate {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .box::before {
+            display: block;
+            content: "";
+            height: 50px;
+            padding: 15px;
+            padding-bottom: 0;
+            width: 100px;
+            box-sizing: border-box;
+            border-radius: 50px 50px 0 0;
+            background: -webkit-linear-gradient(right, #fff 0%, #fff 100%), -webkit-linear-gradient(right, #fff 0%, #74baff 100%);
+            background-clip: content-box, padding-box;
+        }
+
+        .box::after {
+            display: block;
+            content: "";
+            height: 50px;
+            padding: 15px;
+            padding-top: 0;
+            width: 100px;
+            box-sizing: border-box;
+            border-radius: 0px 0px 50px 50px;
+            background: -webkit-linear-gradient(right, #fff 0%, #fff 100%), -webkit-linear-gradient(right, rgb(13, 128, 149) 0%, #74baff 100%);
+            background-clip: content-box, padding-box;
+        }
+
+        #text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 10;
+            font-size: 17px;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box">
+
+        </div>
+        <p id="text">1</p>
+    </div>
+
+
+    <script>
+        addtime()
+        function addtime() {
+            let i = 1
+            let timer = null
+            let text = document.querySelector('#text')
+            if (i === 65535) {
+                clearInterval(timer)
+                timer = null
+            }
+            timer = setInterval(() => {
+                i++
+                text.innerHTML = i
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>

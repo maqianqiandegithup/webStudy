@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 方案1 calc计算
+        .container {
+            height: 400px;
+            width: 500px;
+            border: 1px solid red;
+        }
+        .father{
+            height: 100%;
+        }
+        .son1{
+            background: black;
+            height: 100px;
+        }
+        .son2{
+            background: blue;
+            height: calc(100% - 100px)
+        } */
+
+        /*
+        定位
+         .container {
+            height: 400px;
+            width: 500px;
+            border: 1px solid red;
+        }
+        .father {
+            height: 100%;
+            position: relative;
+        }
+        .son1 {
+            background: black;
+            height: 100px;
+        }
+        .son2 {
+            background: blue;
+            position: absolute;
+            top: 100px;
+            width: 500px;
+            bottom: 0;
+        } */
+
+         /*布局
+          .container {
+            height: 400px;
+            width: 500px;
+            border: 1px solid red;
+        }
+        .father {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .son1 {
+            background: black;
+            height: 100px;
+        }
+        .son2 {
+            background: blue;
+           flex: 1;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <!-- <a href="logo.jpg" download="logo.jpg">下载图片</a> -->
+        <div class="father">
+            <div class="son1">
+
+            </div>
+            <div class="son2">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+
+</html>

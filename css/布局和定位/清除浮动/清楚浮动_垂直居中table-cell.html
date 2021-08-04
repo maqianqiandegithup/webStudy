@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 使用使用flex布局 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .float_lf{
+        float: left;
+    }
+    li{
+        list-style: none;
+        margin-left: 10px;
+    }
+    li::after{
+        content: '/';
+        margin-left: 10px;
+
+    }
+    li:last-child::after{
+        content: none;
+    }
+    .container{
+        width: 600px;
+        height: 400px;
+        background: #ccc;
+        display: table-cell;/*水平垂直居中*/
+        vertical-align: middle;
+    }
+    .box{
+        width: 200px;
+        margin: 0 auto;
+        background: rgb(161, 156, 156);
+        box-sizing: border-box;
+    }
+    .clearFix::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container clearFix">
+        <ul class="box clearFix">
+            <p>你好</p>
+            <li class="float_lf">我的</li>
+            <li class="float_lf">我的</li>
+            <li class="float_lf">我的</li>
+            <li></li>
+            <p>那边</p>
+        </ul>
+    </div>
+    <p>我的</p>
+</body>
+
+</html>

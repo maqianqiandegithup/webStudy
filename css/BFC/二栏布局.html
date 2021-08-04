@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        方法1：让两个都成为BFC
+        .column:nth-of-type(1){
+            height: 300px;
+            width: 200px;
+            background: red;
+            float: left;
+            margin-right: 20px;
+        }
+        .column:nth-of-type(2){
+            overflow: hidden; 
+            display: inline-block;
+            height: 300px;  
+            background: purple;
+        } */
+
+        /*
+         方法2：第二个使用margin的方式
+         .column:nth-of-type(1){
+            height: 300px;
+            width: 200px;
+            background: red;
+            float: left;
+            margin-right: 20px;
+        }
+        .column:nth-of-type(2){
+            height: 300px;
+            margin-left: 220px;
+            width: calc(100% - 220px);
+            background: purple;
+        } */
+
+        /* 方法3 使用flex布局 */
+
+
+        .container {
+            display: flex;
+        }
+
+        .column:nth-of-type(1) {
+            height: 300px;
+            width: 200px;
+            background: red;
+
+            margin-right: 20px;
+        }
+
+        .column:nth-of-type(2) {
+            height: 300px;
+            flex: 1;
+            background: purple;
+        }
+
+        /* 方法3 使用flex布局 */
+        @media screen and (max-width: 600px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 600px;
+            }
+            .column:nth-of-type(1) {
+                height: 300px;
+                width: 600px;
+                background: red;
+                margin-bottom: 20px;
+                margin-right: 10px;
+            }
+            .column:nth-of-type(2) {
+                width: 600px;
+                flex: 1;
+                background: purple;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用BFC -->
+    <!-- 左浮动，右自适应 -->
+    <div class="container">
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+    </div>
+</body>
+
+</html>

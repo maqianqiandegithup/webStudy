@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container::after{
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            clear: both;
+        }
+        .main,
+        .left,
+        .right {
+            float: left;
+            min-height: 130px;
+        }
+        .main {
+            width: 100%;
+           
+        }
+        .left {
+            width: 200px;
+            background-color: blue;
+            margin-left: -100%;
+        }
+        .right {
+            width: 300px;
+            background-color: green;
+            margin-left: -300px;
+        }
+        .content{
+            height: 100%;
+            /* width: 100%; */
+            margin: 0 300px 0 200px;
+            background-color: red;
+        }
+        .link{
+            color: red;
+        }
+        .link a{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="content">
+                main
+            </div>
+        </div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+        <div class="link">
+            <p>p标签</p>
+            <a href="#"><span>我的</span> </a>
+        </div>
+       
+    </div>
+</body>
+</html>

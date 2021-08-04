@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 他们两个完全同级，完全看谁的权重大 */
+        
+        .box .div1 .p1 {
+            color: red;
+            /* 10+10+10 */
+        }
+        
+        .box .p1.p2 {
+            color: blue;
+            /* 10+10+10 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="div1">
+            <p class="p1 p2 p3">text</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

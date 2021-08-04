@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 不想文字环绕，本质上也是一个左固定，右侧自适应的状态 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        文字环绕
+        .left{
+            width: 100px;
+            height: 90px;
+            background: red;
+            float: left;
+            margin-right: 10px;
+        } */
+        .left{
+            width: 100px;
+            height: 90px;
+            background: red;
+            float: left;
+            margin-right: 10px;
+        }
+        p{
+          /* overflow: hidden;   创建BFc，方案1 实现左右效果 */
+          /* display: inline-block; 实现上下效果 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="left">
+
+        </div>
+        <p>
+            前端开发的流程：改页面、传参数、求接口、渲染数据、 查返回结果的正确性
+            一、把未提交这里和法人单位有关的都搞完。测一测，走一走流程
+            1.调样式
+            2.
+            二、如果选择的不是这个列表，就不要重置为高亮。
+            点击的时候什么不同，但是渲染了相同元素，单点击后产生的结果呢和参数呢
+            高亮是根据class来控制。两个表格之间怎么影响。
+            因为我不知道他们怎么渲染的。这种
+            只能是删除类名。
+            如果不一样呢，怎么清楚另一个表的样式。用dom设置所有的都是白色，然后把点击后的设置为高亮。没法定位，没法区分不同元素，所以只能先这样吧。算是个bug，但不影响使用。怎么区分，算了不管了。
+            三、设置一下列表的最大宽度
+        </p>
+    </div>
+</body>
+
+</html>
