@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .father{
+        margin: 10px;
+        padding: 10px;
+        border: 3px solid black;
+        height: 100px;
+        width: 100px;
+        /* position: absolute; */
+        position: relative;
+
+    }
+    .son{
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: 30px;
+        left: 30px;
+        background: gray;
+    }
+   
+.span{
+    padding: 10px;
+    border: 1px solid red;
+    margin: 10px;
+}
+
+</style>
+<body>
+    <!-- top 定位相对的是content padding 还是margin -->
+    <div class="father">
+        <div class="son">
+        </div>
+    </div>
+    <div>
+    <span class="span">我的</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            overflow: hidden;
+        }
+        .left{
+            height: 100px;
+            width: 300px;
+            background: red;
+            float: left;
+        }
+        .right{
+            height: 100px;
+            width: 400px;
+            float: right;
+            background: plum;
+        }
+        .main{
+            height: 100px;
+            background: purple;
+            margin-left: 305px;
+            margin-right: 405px;
+        }
+        .other{
+            background: green;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="main">我的</div>
+    </div>
+    <div class="other">
+        你好
+    </div>
+</body>
+</html>
